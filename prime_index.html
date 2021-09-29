@@ -1,0 +1,900 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>PRIME Admin</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="vendors/feather/feather.css">
+  <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" href="vendors/typicons/typicons.css">
+  <link rel="stylesheet" href="vendors/simple-line-icons/css/simple-line-icons.css">
+  <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
+  <link rel="stylesheet" href="css/background.css">
+  <!-- endinject -->
+  <!-- Plugin css for this page -->
+  <link rel="stylesheet" href="vendors/datatables.net-bs4/dataTables.bootstrap4.css">
+  <link rel="stylesheet" href="js/select.dataTables.min.css">
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="css/vertical-layout-light/style.css">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="images/favicon.png" />
+
+</head>
+<body>
+  <div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex align-items-top flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-start">
+        <div class="me-3">
+          <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-bs-toggle="minimize">
+            <span class="icon-menu"></span>
+          </button>
+        </div>
+        <div>
+          <a class="navbar-brand brand-logo" href="index.html">
+            <img src="images/logo.svg" alt="logo" />
+          </a>
+          <a class="navbar-brand brand-logo-mini" href="index.html">
+            <img src="images/logo-mini.svg" alt="logo" />
+          </a>
+        </div>
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-top">
+
+        <ul class="navbar-nav">
+          <li class="nav-item font-weight-semibold d-none d-lg-block ms-0">
+            <h1 class="welcome-text">Prime Solution's <span class="text-black fw-bold">Dashboard</span></h1>
+            <h3 class="welcome-sub-text">Company Dashboard</h3>
+          </li>
+        </ul>
+
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link count-indicator" id="countDropdown"  data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <i class="icon-bell"></i>
+              <span class="count"></span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list pb-0"
+              aria-labelledby="countDropdown">
+              <a href="sale_notification.html"  class="dropdown-item py-3">
+                <p class="mb-0 font-weight-medium float-left">You have 7 unread mails </p>
+                 <span class="badge badge-pill badge-primary float-right">View all</span> 
+              </a>
+              <div class="dropdown-divider"></div>
+
+            </div>
+          </li>
+          <li class="nav-item dropdown d-none d-lg-block user-dropdown">
+            <a class="nav-link" id="UserDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+              <img class="img-xs rounded-circle" src="images/faces/face8.jpg" alt="Profile image"> </a>
+          </li>
+        </ul>
+
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
+          data-bs-toggle="offcanvas">
+          <span class="mdi mdi-menu"></span>
+        </button>
+
+      </div>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+ 
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="prime_index.html">
+              <i class="mdi mdi-grid-large menu-icon"></i>
+              <span class="menu-title">Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="prime_customer.html">
+              <i class="menu-icon mdi mdi-account-multiple-outline"></i>
+              <span class="menu-title">Customer</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="prime_project.html">
+              <i class="menu-icon mdi mdi-card-text-outline"></i>
+              <span class="menu-title">Project</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="prime_alluser.html">
+              <i class="menu-icon mdi mdi-face"></i>
+              <span class="menu-title">User</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="prime_product.html">
+              <i class="menu-icon mdi mdi-briefcase"></i>
+              <span class="menu-title">Product</span>
+            </a>
+          </li>
+
+          <li class="nav-item nav-category">Account</li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="prime_account.html">
+              <i class="menu-icon mdi mdi-account-box-outline"></i>
+              <span class="menu-title">My Profile</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="prime_setting.html">
+              <i class="menu-icon mdi mdi-settings"></i>
+              <span class="menu-title">Setting</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login.html">
+              <i class="menu-icon mdi mdi-logout-variant"></i>
+              <span class="menu-title">Logout</span>
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+      <!-- partial -->
+
+
+
+      <div class="main-panel">
+        <div class="content-wrapper">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="home-tab">
+
+                <div>
+
+
+                  <form action="index.html">
+                    <div class="row">
+                      <div class="col-container" style="width:200px">
+                        <label for="startdate">Start Date </label>
+                        <input style="border-radius: 10px; width: 10rem; " type="date" id="startdate" name="startdate">
+                      </div>
+                      <div class="col-container" style="width:200px">
+                        <label for="enddate">End Date </label>
+                        <input style="border-radius: 10px; width: 10rem; " type="date" id="enddate" name="enddate">
+                      </div>
+                      <div class="col" style="margin-top: 1.3rem;">
+
+                        <input style="border-radius: 14px;" class=" btn-primary " type="submit">
+                      </div>
+
+                      <div class="col-6"></div>
+
+                  </form>
+
+
+
+
+                </div>
+              </div>
+
+              <a href="updatetarget.html">
+                <button style="color: aliceblue; margin-top: 1cm;" type="button" class="btn btn-primary btn-sm">Update
+                  Target</button>
+              </a>
+
+              <div class="tab-content tab-content-basic">
+                <div class="tab-pane fade show active" id="overview" role="tabpanel" aria-labelledby="overview">
+
+                  <div class="row">
+                    <div class="col-lg-12 grid-margin stretch-card">
+                      <div class="card">
+                        <div class="card-body">
+
+                          <h4 class="card-title">Overview</h4>
+                          <p class="card-description">
+                            Overall
+                          </p>
+                          <div class="table-responsive">
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th>Total Order</th>
+                                  <th>Total Value Win</th>
+                                  <th>Forecast Value</th>
+                                  <th>All WIN</th>
+                                  <th>All Lost</th>
+                                  <th>In progress</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>64</td>
+                                  <td>7,682,050,000</td>
+                                  <td>85,523,000</td>
+                                  <td>51</td>
+                                  <td>5</td>
+                                  <td>8</td>
+                                </tr>
+
+                              </tbody>
+                            </table>
+                          </div>
+
+                        </div>
+                      </div>
+
+
+
+                    </div>
+
+
+                    <!-- <div class="col-lg-12 grid-margin stretch-card">
+                      <div class="card">
+                        <div class="card-body">
+                          <h4 class="card-title">Target Tube</h4>
+                          <p class="card-description">
+                            Total Sale ฿36,542,253
+                            Out of
+                            ฿100,000,000 
+                          </p>
+                          <div class="progress">
+                            <div class="progress-bar bg-primary" role="progressbar" style="width: 36%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+   
+                        </div>
+                      </div>
+                    </div> -->
+
+
+
+
+                  </div>
+
+                  <div class="row">
+
+                    <div class="col-lg-8 d-flex flex-column">
+                      <div class="row flex-grow">
+                        <div class="col-12 grid-margin stretch-card">
+                          <div class="card card-rounded">
+                            <div class="card-body">
+                              <div class="d-sm-flex justify-content-between align-items-start">
+                                <div>
+                                  <h4 class="card-title card-title-dash">Market Overview</h4>
+                                  <p class="card-subtitle card-subtitle-dash"> </p>
+                                </div>
+
+                              </div>
+
+ 
+
+
+                              <div class="d-sm-flex align-items-center mt-1 justify-content-between">
+
+                                <div class="me-3">
+                                  <div id="marketing-overview-legend"></div>
+                                </div>
+                              </div>
+
+                              <div>
+                                <table class="charts-css column">
+                                  <table id="q-graph">
+                                    <caption> </caption>
+                                    <!-- <thead>
+                                    <tr>
+                                    <th></th>
+                                    <th class="sent">Invoiced</th>
+                                    <th class="paid">Collected</th>
+                                    </tr>
+                                    </thead> -->
+                                    <tbody>
+                                    <tr class="qtr" id="q1">
+                                    <th scope="row"  >JAN</th>
+                                    <td class="sent bar" style="height: 10%;"><p> </p></td>
+                                    <td class="paid bar" style="height: 15%;"><p> </p></td>
+                                    </tr>
+                                    <tr class="qtr" id="q2">
+                                    <th scope="row">FEB</th>
+                                    <td class="sent bar" style="height: 16%;"><p> </p></td>
+                                    <td class="paid bar" style="height: 18%;"><p> </p></td>
+                                    </tr>
+                                    <tr class="qtr" id="q3">
+                                    <th scope="row">MAR</th>
+                                    <td class="sent bar" style="height: 21%;"><p> </p></td>
+                                    <td class="paid bar" style="height: 22%;"><p> </p></td>
+                                    </tr>
+                                    <tr class="qtr" id="q4">
+                                    <th scope="row">APR</th>
+                                    <td class="sent bar" style="height: 26%;"><p> </p></td>
+                                    <td class="paid bar" style="height: 31%;"><p> </p></td>
+                                    </tr>
+                                    <tr class="qtr" id="q5">
+                                      <th scope="row">MAY</th>
+                                      <td class="sent bar" style="height: 34%;"><p> </p></td>
+                                      <td class="paid bar" style="height: 33%;"><p> </p></td>
+                                      </tr>
+                                      <tr class="qtr" id="q6">
+                                        <th scope="row">JUN</th>
+                                        <td class="sent bar" style="height: 46%;"><p> </p></td>
+                                        <td class="paid bar" style="height: 39%;"><p> </p></td>
+                                        </tr>
+                                        <tr class="qtr" id="q7">
+                                          <th scope="row">JUL</th>
+                                          <td class="sent bar" style="height: 58%;"><p> </p></td>
+                                          <td class="paid bar" style="height: 45%;"><p> </p></td>
+                                          </tr>
+                                          <tr class="qtr" id="q8">
+                                            <th scope="row">AUG</th>
+                                            <td class="sent bar" style="height: 68%;"><p> </p></td>
+                                            <td class="paid bar" style="height: 58%;"><p> </p></td>
+                                            </tr>
+                                            <tr class="qtr" id="q9">
+                                              <th scope="row">SEP</th>
+                                              <td class="sent bar" style="height: 76%;"><p> </p></td>
+                                              <td class="paid bar" style="height: 69%;"><p> </p></td>
+                                              </tr>
+                                              <tr class="qtr" id="q10">
+                                                <th scope="row">OCT</th>
+                                                <td class="sent bar" style="height: 83%;"><p> </p></td>
+                                                <td class="paid bar" style="height: 89%;"><p> </p></td>
+                                                </tr>
+                                                <tr class="qtr" id="q11">
+                                                  <th scope="row">NOV</th>
+                                                  <td class="sent bar" style="height: 92%;"><p> </p></td>
+                                                  <td class="paid bar" style="height: 95%;"><p> </p></td>
+                                                  </tr>
+                                                  <tr class="qtr" id="q12">
+                                                    <th scope="row">DEC</th>
+                                                    <td class="sent bar" style="height: 95%;"><p> </p></td>
+                                                    <td class="paid bar" style="height: 98%;"><p> </p></td>
+                                                    </tr>
+
+                                    </tbody>
+                                    </table>
+                                    
+                                    <div  id="ticks">
+                                    <div class="tick" style="height: 59px;" ><p> </p> </div>
+                                    <div class="tick" style="height: 59px;"><hr style="height:2px;border-width:1;color:gold;background-color:gold; "><p>40,000K฿</p></div>
+                                    <div class="tick" style="height: 59px;"><p>30,000K฿</p></div>
+                                    <div class="tick" style="height: 59px;"><p>20,000K฿</p></div>
+                                    <div class="tick" style="height: 59px;"><p>10,000K฿</p></div>
+                                    </div>
+                                </table>
+                              </div>
+
+                              <!-- <div class="chartjs-bar-wrapper mt-3">
+                                <canvas id="marketingOverview"></canvas>
+                              </div> -->
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-4 d-flex flex-column">
+                      <div class="row flex-grow">
+                        <div class="col-12 grid-margin stretch-card">
+                          <div class="card card-rounded">
+                            <div class="card-body">
+                              <div class="row">
+                                <div class="col-lg-12">
+                                  <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <h4 class="card-title card-title-dash">Company Target</h4>
+
+
+                                  </div>
+                                  <p>100,000,000฿</p>
+                                  <canvas class="my-auto" id="doughnutChart" height="150"></canvas>
+                                  <div id="doughnut-chart-legend" class="mt-4 text-center"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="col-lg-12 grid-margin stretch-card">
+                    <div class="card">
+                      <div class="card-body">
+                        <h4 class="card-title">User</h4>
+                        <p class="card-description">
+                          Display Something
+                        </p>
+
+<!-- 
+                        <div class="col-md-6">
+                          <div class="card-body">
+                            <div class="template-demo">
+
+                              <div class="dropdown">
+                                <button style="color: aliceblue;" class="btn btn-primary btn-sm dropdown-toggle"
+                                  type="button" id="dropdownMenuSizeButton3" data-bs-toggle="dropdown"
+                                  aria-haspopup="true" aria-expanded="false">
+                                  Sort by </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuSizeButton3">
+                                  <a class="dropdown-item" href="#">Name</a>
+                                  <a class="dropdown-item" href="#">Target</a>
+                                  <a class="dropdown-item" href="#">Project Number</a>
+                                  <a class="dropdown-item" href="#">Project Value</a>
+                                  <a class="dropdown-item" href="#">WIN Number</a>
+                                  <a class="dropdown-item" href="#">WIN Value</a>
+                                  <a class="dropdown-item" href="#">Lost Number</a>
+                                  <a class="dropdown-item" href="#">Lost Value</a>
+                                  <a class="dropdown-item" href="#">Forecast Number</a>
+                                  <a class="dropdown-item" href="#">Forecast Value</a>
+                                  <a class="dropdown-item" href="#">Last Update</a>
+                                </div>
+                              </div>
+                              <div class="dropdown">
+                                <button style="color: aliceblue;" class="btn btn-primary btn-sm dropdown-toggle"
+                                  type="button" id="dropdownMenuSizeButton3" data-bs-toggle="dropdown"
+                                  aria-haspopup="true" aria-expanded="false">
+                                  Sort by </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuSizeButton3">
+                                  <a class="dropdown-item" href="#">Name</a>
+                                  <a class="dropdown-item" href="#">Target</a>
+                                  <a class="dropdown-item" href="#">Project Number</a>
+                                  <a class="dropdown-item" href="#">Project Value</a>
+                                  <a class="dropdown-item" href="#">WIN Number</a>
+                                  <a class="dropdown-item" href="#">WIN Value</a>
+                                  <a class="dropdown-item" href="#">Lost Number</a>
+                                  <a class="dropdown-item" href="#">Lost Value</a>
+                                  <a class="dropdown-item" href="#">Forecast Number</a>
+                                  <a class="dropdown-item" href="#">Forecast Value</a>
+                                  <a class="dropdown-item" href="#">Last Update</a>
+                                </div>
+                              </div>
+                              <div class="dropdown">
+                                <button style="color: aliceblue;" class="btn btn-primary btn-sm dropdown-toggle"
+                                  type="button" id="dropdownMenuSizeButton3" data-bs-toggle="dropdown"
+                                  aria-haspopup="true" aria-expanded="false">
+                                  Sort by </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuSizeButton3">
+                                  <a class="dropdown-item" href="#">Name</a>
+                                  <a class="dropdown-item" href="#">Target</a>
+                                  <a class="dropdown-item" href="#">Project Number</a>
+                                  <a class="dropdown-item" href="#">Project Value</a>
+                                  <a class="dropdown-item" href="#">WIN Number</a>
+                                  <a class="dropdown-item" href="#">WIN Value</a>
+                                  <a class="dropdown-item" href="#">Lost Number</a>
+                                  <a class="dropdown-item" href="#">Lost Value</a>
+                                  <a class="dropdown-item" href="#">Forecast Number</a>
+                                  <a class="dropdown-item" href="#">Forecast Value</a>
+                                  <a class="dropdown-item" href="#">Last Update</a>
+                                </div>
+                              </div>
+
+                              <div>
+                                <form action="index.html">
+                                  <div class="row">
+                                    <div class="col-container" style="width:200px">
+                                      <label for="userstartdate">Start Date</label>
+                                      <input style="border-radius: 7px;" type="date" id="userstartdate"
+                                        name="startdate">
+                                    </div>
+                                    <div class="col-container" style="width:200px">
+                                      <label for="userenddate">End Date</label>
+                                      <input style="border-radius: 7px;" type="date" id="userenddate" name="enddate">
+                                    </div>
+                                    <div class="col" style="margin-top: 1.2rem;">
+
+                                      <input style="border-radius: 14px;" class=" btn-primary " type="submit">
+                                    </div>
+                                  </div>
+                                </form>
+                              </div>
+
+
+
+                            </div>
+                          </div>
+                        </div> -->
+
+
+                        <!-- <div class="row">
+                            <div class="col-lg-12 grid-margin stretch-card">
+                              <div  class="form-group col-md-1">
+                                
+                                  <div class="dropdown">
+                                     <button style="color: aliceblue;" class="btn btn-primary btn-sm dropdown-toggle" type="button" id="dropdownMenuSizeButton3" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Sort by </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuSizeButton3">
+                                         <a class="dropdown-item" href="#">Name</a>
+                                         <a class="dropdown-item" href="#">Target</a>
+                                         <a class="dropdown-item" href="#">Project Number</a>
+                                         <a class="dropdown-item" href="#">Project Value</a>
+                                         <a class="dropdown-item" href="#">WIN Number</a>
+                                         <a class="dropdown-item" href="#">WIN Value</a>
+                                         <a class="dropdown-item" href="#">Lost Number</a>
+                                         <a class="dropdown-item" href="#">Lost Value</a>
+                                         <a class="dropdown-item" href="#">Forecast Number</a>
+                                         <a class="dropdown-item" href="#">Forecast Value</a>
+                                         <a class="dropdown-item" href="#">Last Update</a>
+                                         </div>
+                                   </div> 
+              
+                               </div>  
+                               <div  class="form-group col-md-1">
+ 
+                                <div class="dropdown">
+                                  <button style="color: aliceblue;" class="btn btn-primary btn-sm dropdown-toggle" type="button" id="dropdownMenuSizeButton3" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                   Sort by
+                                  </button>
+                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuSizeButton3">
+              
+                                    <a class="dropdown-item" href="#">Name</a>
+                                    <a class="dropdown-item" href="#">Target</a>
+                                    <a class="dropdown-item" href="#">Project Number</a>
+                                    <a class="dropdown-item" href="#">Project Value</a>
+                                    <a class="dropdown-item" href="#">WIN Number</a>
+                                    <a class="dropdown-item" href="#">WIN Value</a>
+                                    <a class="dropdown-item" href="#">Lost Number</a>
+                                    <a class="dropdown-item" href="#">Lost Value</a>
+                                    <a class="dropdown-item" href="#">Forecast Number</a>
+                                    <a class="dropdown-item" href="#">Forecast Value</a>
+                                    <a class="dropdown-item" href="#">Last Update</a>
+              
+                                 </div>
+                               </div> 
+              
+                               </div>  
+                               <div  class="form-group col-md-1">
+ 
+                                <div class="dropdown">
+                                  <button style="color: aliceblue;" class="btn btn-primary btn-sm dropdown-toggle" type="button" id="dropdownMenuSizeButton3" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                   Sort by
+                                  </button>
+                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuSizeButton3">
+              
+                                    <a class="dropdown-item" href="#">Name</a>
+                                    <a class="dropdown-item" href="#">Target</a>
+                                    <a class="dropdown-item" href="#">Project Number</a>
+                                    <a class="dropdown-item" href="#">Project Value</a>
+                                    <a class="dropdown-item" href="#">WIN Number</a>
+                                    <a class="dropdown-item" href="#">WIN Value</a>
+                                    <a class="dropdown-item" href="#">Lost Number</a>
+                                    <a class="dropdown-item" href="#">Lost Value</a>
+                                    <a class="dropdown-item" href="#">Forecast Number</a>
+                                    <a class="dropdown-item" href="#">Forecast Value</a>
+                                    <a class="dropdown-item" href="#">Last Update</a>
+              
+                                 </div>
+                               </div> 
+              
+                               </div>
+                                <div  class="form-group col-md-5">
+                                  <div>
+                                    <form action="index.html">
+                                      <label for="userstartdate">Start Date</label>
+                                      <input style="border-radius: 7px;" type="date" id="userstartdate" name="startdate">
+                                      <label for="userenddate">End Date</label>
+                                      <input style="border-radius: 7px;" type="date" id="userenddate" name="enddate">
+                                      <input style="border-radius: 10px;" class=" btn-primary " type="submit">
+                                    </form>
+ 
+                                  </div>
+
+                                </div> 
+                            </div>                            
+                          </div> -->
+
+                          <a href="alluser.html">
+                            <button style="color: aliceblue; margin-top: 1cm;" type="button" class="btn btn-primary btn-sm">View more</button>
+                          </a>
+
+                        <div class="table-responsive">
+                          <table class="table table-striped">
+                            <thead>
+                              <tr>
+                                <th>
+                                  User
+                                </th>
+                                <th>
+                                  Name
+                                </th>
+                                <th>
+                                  Target
+                                </th>
+                                <th>
+                                  Project
+                                </th>
+                                <th>
+                                  WIN
+                                </th>
+                                <th>
+                                  Lost
+                                </th>
+                                <th>
+                                  Forecast
+                                </th>
+                                <th>
+                                  LastUpdate
+                                </th>
+
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td class="py-1">
+                                  <img src="images/faces/face1.jpg" alt="image" />
+                                </td>
+                                <td>
+                                  <a href="sale_index_formanager.html">Herman Beck</a>
+                                </td>
+                                <td>
+                                  100,000 ฿
+                                </td>
+                                <td>
+                                  <ul style="list-style-type:none;  ">
+                                    <li>10</li>
+                                    <li>52,000 ฿</li>
+                                  </ul>
+                                </td>
+                                <td>
+                                  <ul style="list-style-type:none;  ">
+                                    <li>10</li>
+                                    <li>52,000 ฿</li>
+                                  </ul>
+                                </td>
+                                <td>
+                                  <ul style="list-style-type:none;  ">
+                                    <li>10</li>
+                                    <li>52,000 ฿</li>
+                                  </ul>
+                                </td>
+                                <td>
+                                  <ul style="list-style-type:none;  ">
+                                    <li>10</li>
+                                    <li>52,000 ฿</li>
+                                  </ul>
+                                </td>
+                                <td>
+                                  <ul style="list-style-type:none;">
+                                    <li>15 May 2017</li>
+                                    <li>
+                                      <a href="addcustomer.html">
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="py-1">
+                                  <img src="images/faces/face2.jpg" alt="image" />
+                                </td>
+                                <td>
+                                 <a href="sale_index_formanager.html"> Messsy Adam</a>
+                                </td>
+                                <td>
+                                  100,000 ฿
+                                </td>
+                                <td>
+                                  <ul style="list-style-type:none;  ">
+                                    <li>10</li>
+                                    <li>52,000 ฿</li>
+                                  </ul>
+                                </td>
+                                <td>
+                                  <ul style="list-style-type:none;  ">
+                                    <li>10</li>
+                                    <li>52,000 ฿</li>
+                                  </ul>
+                                </td>
+                                <td>
+                                  <ul style="list-style-type:none;  ">
+                                    <li>10</li>
+                                    <li>52,000 ฿</li>
+                                  </ul>
+                                </td>
+                                <td>
+                                  <ul style="list-style-type:none;  ">
+                                    <li>10</li>
+                                    <li>52,000 ฿</li>
+                                  </ul>
+                                </td>
+                                <td>
+                                  <ul style="list-style-type:none;">
+                                    <li>15 May 2017</li>
+                                    <li>
+                                      <a href="addcustomer.html">
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="py-1">
+                                  <img src="images/faces/face3.jpg" alt="image" />
+                                </td>
+                                <td>
+                                 <a href="sale_index_formanager.html">  John Richards </a>
+                                </td>
+                                <td>
+                                  100,000 ฿
+                                </td>
+                                <td>
+                                  <ul style="list-style-type:none;  ">
+                                    <li>10</li>
+                                    <li>52,000 ฿</li>
+                                  </ul>
+                                </td>
+                                <td>
+                                  <ul style="list-style-type:none;  ">
+                                    <li>10</li>
+                                    <li>52,000 ฿</li>
+                                  </ul>
+                                </td>
+                                <td>
+                                  <ul style="list-style-type:none;  ">
+                                    <li>10</li>
+                                    <li>52,000 ฿</li>
+                                  </ul>
+                                </td>
+                                <td>
+                                  <ul style="list-style-type:none;  ">
+                                    <li>10</li>
+                                    <li>52,000 ฿</li>
+                                  </ul>
+                                </td>
+                                <td>
+                                  <ul style="list-style-type:none;">
+                                    <li>15 May 2017</li>
+                                    <li>
+                                      <a href="addcustomer.html">
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="py-1">
+                                  <img src="images/faces/face4.jpg" alt="image" />
+                                </td>
+                                <td>
+                                 <a href="sale_index_formanager.html"> Peter Meggik</a>
+                                </td>
+                                <td>
+                                  100,000 ฿
+                                </td>
+                                <td>
+                                  <ul style="list-style-type:none;  ">
+                                    <li>10</li>
+                                    <li>52,000 ฿</li>
+                                  </ul>
+                                </td>
+                                <td>
+                                  <ul style="list-style-type:none;  ">
+                                    <li>10</li>
+                                    <li>52,000 ฿</li>
+                                  </ul>
+                                </td>
+                                <td>
+                                  <ul style="list-style-type:none;  ">
+                                    <li>10</li>
+                                    <li>52,000 ฿</li>
+                                  </ul>
+                                </td>
+                                <td>
+                                  <ul style="list-style-type:none;  ">
+                                    <li>10</li>
+                                    <li>52,000 ฿</li>
+                                  </ul>
+                                </td>
+                                <td>
+                                  <ul style="list-style-type:none;">
+                                    <li>15 May 2017</li>
+                                    <li>
+                                      <a href="addcustomer.html">
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="py-1">
+
+                                </td>
+                                <td>
+                                  Summary
+                                </td>
+                                <td>
+                                  400,000 ฿
+                                </td>
+                                <td>
+                                  <ul style="list-style-type:none;  ">
+                                    <li>40</li>
+                                    <li>200,000 ฿</li>
+                                  </ul>
+                                </td>
+                                <td>
+                                  <ul style="list-style-type:none;  ">
+                                    <li>40</li>
+                                    <li>200,000 ฿</li>
+                                  </ul>
+                                </td>
+                                <td>
+                                  <ul style="list-style-type:none;  ">
+                                    <li>40</li>
+                                    <li>200,000 ฿</li>
+                                  </ul>
+                                </td>
+                                <td>
+                                  <ul style="list-style-type:none;  ">
+                                    <li>40</li>
+                                    <li>200,000 ฿</li>
+                                  </ul>
+                                </td>
+                                <td>
+                                  <ul style="list-style-type:none;">
+                                    <li>15 May 2017</li>
+                                    <li>
+                                      <a href="addcustomer.html">
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </td>
+                              </tr>
+
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- content-wrapper ends -->
+      <!-- partial:partials/_footer.html -->
+      <footer class="footer">
+        <div class="d-sm-flex justify-content-center justify-content-sm-between">
+          <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Methatical's Dashboard</span>
+          <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Copyright © 2021. All rights
+            reserved.</span>
+        </div>
+      </footer>
+      <!-- partial -->
+    </div>
+    <!-- main-panel ends -->
+  </div>
+  <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+
+  <!-- plugins:js -->
+  <script src="vendors/js/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page -->
+  <script src="vendors/chart.js/Chart.min.js"></script>
+  <script src="vendors/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+  <script src="vendors/progressbar.js/progressbar.min.js"></script>
+
+  <!-- End plugin js for this page -->
+  <!-- inject:js -->
+  <script src="js/off-canvas.js"></script>
+  <script src="js/hoverable-collapse.js"></script>
+  <script src="js/template.js"></script>
+  <script src="js/settings.js"></script>
+  <script src="js/todolist.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="js/dashboard.js"></script>
+  <script src="js/Chart.roundedBarCharts.js"></script>
+  <!-- End custom js for this page-->
+</body>
+
+</html>
